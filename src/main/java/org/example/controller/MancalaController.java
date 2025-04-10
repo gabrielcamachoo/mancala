@@ -20,6 +20,7 @@ public class MancalaController {
     public void play() {
         int currentPlayer = 1;
         while (!model.isGameOver()) {
+            separadorEntreTurnos();
             view.displayBoard(model.getBoard(), currentPlayer);
             view.promptPlayer(currentPlayer);
 
@@ -49,4 +50,10 @@ public class MancalaController {
 
         return model.getBoard()[pitIndex] > 0;
     }
+    private void separadorEntreTurnos() {
+        System.out.println();
+        System.out.println("────────────────────────────────────────────────────────────");
+        System.out.println();
+    }
+
 }
