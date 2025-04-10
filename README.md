@@ -45,8 +45,6 @@ MancalaProject/
 
 - Implementar lógica del **jugador sintético**.
 - Agregar soporte a **jugador vs máquina**.
-- Construir una **interfaz gráfica interactiva** con JavaFX.
-- Incluir pruebas unitarias (JUnit).
 
 ---
 
