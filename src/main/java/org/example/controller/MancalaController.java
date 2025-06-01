@@ -6,10 +6,19 @@ import org.example.strategy.*;
 
 public class MancalaController {
     private MancalaModel model;
-    private org.example.view.MancalaView view;
+    private MancalaView view;
     private MancalaStrategy player1Strategy;
     private MancalaStrategy player2Strategy;
 
+    // Constructor por defecto: jugador humano vs bot voraz
+    public MancalaController() {
+        model = new MancalaModel();
+        view = new MancalaView();
+        player1Strategy = new HumanStrategy();
+        player2Strategy = new SyntheticGreedyStrategy(2);
+    }
+
+    // Constructor alterno por si quieres inyectar las estrategias manualmente
     public MancalaController(MancalaStrategy p1, MancalaStrategy p2) {
         model = new MancalaModel();
         view = new MancalaView();
@@ -32,10 +41,16 @@ public class MancalaController {
                 view.invalidMove();
                 continue;
             }
+            if (pitIndex == -1) {
+                System.out.println("️ Jugador " + currentPlayer + " no tiene jugadas válidas. Turno perdido.");
+                currentPlayer = (currentPlayer == 1) ? 2 : 1;
+                continue;
+            }
 
             boolean extraTurn = model.makeMove(pitIndex, currentPlayer);
             if (!extraTurn)
                 currentPlayer = (currentPlayer == 1) ? 2 : 1;
+
         }
 
         view.displayBoard(model.getBoard(), currentPlayer);
@@ -50,10 +65,10 @@ public class MancalaController {
 
         return model.getBoard()[pitIndex] > 0;
     }
+
     private void separadorEntreTurnos() {
         System.out.println();
         System.out.println("────────────────────────────────────────────────────────────");
         System.out.println();
     }
-
 }
