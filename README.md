@@ -1,4 +1,4 @@
-# 🪙 Mancala Game - Proyecto de Análisis de Algoritmos
+#  Mancala  - Proyecto de Análisis de Algoritmos
 
 Este proyecto implementa el clásico juego **Mancala** utilizando el patrón **Modelo-Vista-Controlador (MVC)** y **Strategy** en Java. Fue desarrollado como parte del curso de **Análisis de Algoritmos** en la Pontificia Universidad Javeriana.
 
@@ -45,8 +45,6 @@ MancalaProject/
 
 - Implementar lógica del **jugador sintético**.
 - Agregar soporte a **jugador vs máquina**.
-- Construir una **interfaz gráfica interactiva** con JavaFX.
-- Incluir pruebas unitarias (JUnit).
 
 ---
 
