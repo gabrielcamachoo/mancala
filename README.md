@@ -21,6 +21,7 @@ MancalaProject/
 │       ├── strategy/
 │       │   └── HumanStrategy.java
 │       │   └── MancalaStrategy.java
+│       │   └── SyntheticGreedyStrategy.java
 │       ├── controller/
 │       │   └── MancalaCOntroller.java
 │       ├── view/
@@ -36,15 +37,7 @@ MancalaProject/
 - ✅ Estructura MVC y Strategy implementada.
 - ✅ Reglas básicas del juego funcionando.
 - ✅ Interfaz de texto en consola.
-- ⏳ Jugador sintético en desarrollo.
-- ⏳ Interfaz gráfica (JavaFX) en planeación.
-
----
-
-## 🤖 Próximos Pasos
-
-- Implementar lógica del **jugador sintético**.
-- Agregar soporte a **jugador vs máquina**.
+- ✅ Jugador sintético en desarrollo.
 
 ---
 
